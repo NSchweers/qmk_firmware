@@ -22,18 +22,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Del    |   Q  |   W  |   E  |   R  |   T  | CAPS |           | CAPS |   Y  |   U  |   I  |   O  |   P  |   ß    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | BkSp   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |; / L2|' / Cmd |
+ * | TAB    |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |   '    |
  * |--------+------+------+------+------+------| RALT |           | RALT |------+------+------+------+------+--------|
- * | LShift |Z/Ctrl|   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |//Ctrl| RShift |
+ * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |Grv/L1|  '"  |AltShf| CAPS | RALT |                                       | RALT | CAPS |   M3 |   ]  | ~L1  |
+ *   |Grv/L1|  '"  |AltShf| RALT | CAPS |                                       | CAPS | RALT |   M3 |   ]  | ~L1  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        | App  | LGui |       | Alt  |Ctrl/Esc|
+ *                                        | App  | Super|       | Super|Ctrl/Esc|
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Home |       | PgUp |        |      |
  *                                 | Enter| Ctrl |------|       |------|  Ctrl  |Space |
- *                                 |      |      | Super|       | Super|        |      |
+ *                                 |      |      | LALT |       | LALT |        |      |
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -42,21 +42,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // left hand
         KC_EQL,         KC_1,         KC_2,   KC_3,   KC_4,   KC_5,   KC_LEFT,
         KC_DELT,        KC_Q,         KC_W,   KC_E,   KC_R,   KC_T,   KC_CAPS,
-        KC_BSPC,        KC_A,         KC_S,   KC_D,   KC_F,   KC_G,
-        KC_LSFT,        CTL_T(KC_Z),  KC_X,   KC_C,   KC_V,   KC_B,   KC_RALT,
+        KC_TAB,        KC_A,         KC_S,   KC_D,   KC_F,   KC_G,
+        KC_LSFT,        KC_Z,         KC_X,   KC_C,   KC_V,   KC_B,   KC_RALT,
         LT(SYMB,KC_GRV),KC_QUOT,      LALT(KC_LSFT),  KC_RALT,KC_CAPS,
-                                              ALT_T(KC_APP),  KC_LCTRL,
+                                              ALT_T(KC_APP),  KC_LGUI,
                                                               KC_HOME,
-                                               KC_ENT,KC_LGUI,KC_LGUI,
+                                              KC_ENT,KC_LCTRL,KC_LALT,
         // right hand
              KC_RGHT,     KC_6,   KC_7,  KC_8,   KC_9,   KC_0,             KC_MINS,
              KC_CAPS,     KC_Y,   KC_U,  KC_I,   KC_O,   KC_P,             KC_LBRC,
-                          KC_H,   KC_J,  KC_K,   KC_L,   LT(MDIA, KC_SCLN),GUI_T(KC_QUOT),
-             KC_RALT,     KC_N,   KC_M,  KC_COMM,KC_DOT, CTL_T(KC_SLSH),   KC_RSFT,
-                                  KC_CAPS, KC_RALT,KC_BSLS,KC_RBRC,          KC_FN1,
-             KC_LALT,        CTL_T(KC_ESC),
+                          KC_H,   KC_J,  KC_K,   KC_L,   KC_SCLN,          KC_QUOT,
+             KC_RALT,     KC_N,   KC_M,  KC_COMM,KC_DOT, KC_SLSH,          KC_RSFT,
+                                  KC_CAPS, KC_RALT,KC_BSLS,KC_RBRC,        KC_FN1,
+             KC_RGUI,        CTL_T(KC_ESC),
              KC_PGUP,
-             KC_RGUI,KC_RCTRL, KC_SPC
+             KC_LALT,KC_RCTRL, KC_SPC
     ),
 /* Keymap 1: Symbol Layer
  *
